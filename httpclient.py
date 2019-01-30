@@ -154,6 +154,7 @@ class HTTPClient(object):
 
         if args:
             args = urlencode(args)
+            headers['Content-Type'] = 'application/x-www-form-urlencoded'
             headers['Content-Length'] = len(args)
 
         request = self._build_http_request('POST', path, headers=headers, body=args)
