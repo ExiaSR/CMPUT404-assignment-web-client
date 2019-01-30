@@ -7,6 +7,12 @@ See requirements.org (plain-text) for a description of the project.
 
 Make a simple web-client like curl or wget
 
+References
+==========
+
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST#Example
+-https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET
+
 Contributors / Licensing
 ========================
 
