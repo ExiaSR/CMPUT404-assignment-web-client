@@ -51,7 +51,9 @@ class HTTPClient(object):
         return int(first_line[1])
 
     def get_headers(self, data):
-        return None
+        data = data.split('\r\n\r\n')
+        headers = data[0]
+        return headers
 
     def get_body(self, data):
         lines = data.splitlines()
@@ -141,6 +143,8 @@ class HTTPClient(object):
         code = self.get_code(data)
         body = self.get_body(data)
 
+        print(data)
+
         return HTTPResponse(code, body)
 
     def POST(self, url, args=None):
@@ -167,6 +171,8 @@ class HTTPClient(object):
 
         code = self.get_code(data)
         body = self.get_body(data)
+
+        print(data)
 
         return HTTPResponse(code, body)
 
