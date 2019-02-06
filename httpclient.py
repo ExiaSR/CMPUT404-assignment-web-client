@@ -143,6 +143,8 @@ class HTTPClient(object):
         code = self.get_code(data)
         body = self.get_body(data)
 
+        print(body)
+
         return HTTPResponse(code, body)
 
     def POST(self, url, args=None):
@@ -169,6 +171,8 @@ class HTTPClient(object):
 
         code = self.get_code(data)
         body = self.get_body(data)
+
+        print(body)
 
         return HTTPResponse(code, body)
 
